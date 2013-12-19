@@ -1,4 +1,4 @@
-name             'statsd_graphite-rolebook'
+name             'rackspace-statsdGraphite'
 maintainer       'Rackspace'
 maintainer_email 'ryan.richard@rackspace.com'
 license          'All rights reserved'
