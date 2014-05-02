@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = "rackspace_statsdGraphite-berkshelf"
+  config.vm.hostname = "rackspace-statsdGraphite-berkshelf"
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "Berkshelf-CentOS-6.3-x86_64-minimal"
@@ -75,6 +75,8 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
+        "recipe[rackspace_yum]",
+        "recipe[rackspace_statsdGraphite::rhel]",
         "recipe[rackspace_statsdGraphite::default]"
     ]
   end

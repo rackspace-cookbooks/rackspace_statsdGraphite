@@ -1,3 +1,11 @@
+#
+# Cookbook Name:: rackspace_statsdGraphite
+# Recipe:: storage
+#
+# Copyright 2014, Rackspace US, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
 
 device = node['graphite']['whisper_disk']
 filesystem = node['graphite']['whisper_filesystem']
@@ -20,7 +28,7 @@ if node['filesystem']['#{device}'].nil?
         end
         # check volume filesystem
         system("blkid -s TYPE -o value #{device}")
-      end  
+      end
     end
 
     directory "/mnt/storage" do

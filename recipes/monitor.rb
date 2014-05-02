@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: rackspace_statsdGraphite
+# Recipe:: monitor
+#
+# Copyright 2014, Rackspace US, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
+
 include_recipe "cloud_monitoring"
 include_recipe "cloud_monitoring::agent"
 
@@ -50,4 +59,3 @@ cloud_monitoring_check  "graphite_maas" do
   rackspace_api_key     node['cloud_monitoring']['rackspace_api_key']
   action :create
 end
-
