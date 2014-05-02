@@ -12,9 +12,8 @@ filesystem = node['graphite']['whisper_filesystem']
 options = node['graphite']['whisper_fs_options']
 
 if node['filesystem']['#{device}'].nil?
-	execute "formatting #{filesystem} on #{device}" do
-      command "mkfs -t #{filesystem} #{options} #{device}"
-
+  execute "formatting #{filesystem} on #{device}" do
+    command "mkfs -t #{filesystem} #{options} #{device}"
       not_if do
         # wait for the device
         loop do
@@ -25,11 +24,11 @@ if node['filesystem']['#{device}'].nil?
             Chef::Log.info("device #{device} not ready - waiting")
             sleep 10
           end
-        end
+      end
         # check volume filesystem
         system("blkid -s TYPE -o value #{device}")
-      end
     end
+  end
 
     directory "/mnt/storage" do
     	owner node['graphite']['user_account']

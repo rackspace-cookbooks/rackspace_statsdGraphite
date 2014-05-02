@@ -17,8 +17,8 @@ end
 recipes.push('rackspace_statsd')
 recipes.push('graphite')
 
-unless node['graphite']['whisper_disk'] == ""
-	recipes.unshift("rackspace_statsdGraphite::storage")
+unless node['graphite']['whisper_disk'] == ''
+  recipes.unshift('rackspace_statsdGraphite::storage')
 end
 
 # critical recipes
