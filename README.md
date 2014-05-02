@@ -1,4 +1,4 @@
-rackspace-statsdGraphite
+rackspace_statsdGraphite
 =================================
 This is a basic cookbook to set up statsd and graphite on the same server. This cookbook will also allow you to define cloud monitoring checks that will run against graphite.
 
@@ -8,8 +8,8 @@ Requirements
 
 ### Cookbooks
 - graphite
-- statsd
-- cloud_monitoring -  requires node data node['cloud_monitoring']['rackspace_username'] and node['cloud_monitoring']['rackspace_api_key'],
+- rackspace_statsd
+- WIP - rackspace_cloudmonitoring -  requires node data node['cloud_monitoring']['rackspace_username'] and node['cloud_monitoring']['rackspace_api_key'],
 
 Attributes
 ----------
@@ -23,19 +23,9 @@ Usage
 #### rackspace-statsdGraphite::default
 Just include `rackspace-statsdGraphite` in your node's `run_list`. It will auto add the statsd and graphite recipes.
 
+TODO:
+-----
 If you want to enable monitoring, also include the `rackspace-statsdGraphite::monitor` in your run list
-
-Contributing
-------------
-If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
 
 License and Authors
 -------------------
