@@ -2,14 +2,14 @@ site :opscode
 
 metadata
 
-cookbook 'graphite', github: "rackspace-cookbooks/graphite"
+cookbook 'rackspace_graphite', github: "rackspace-cookbooks/rackspace_graphite"
 cookbook 'python', github: "rackspace-cookbooks/python"
-cookbook 'build-essential', github: "rackspace-cookbooks/build-essential"
-cookbook 'apache2', github: "rackspace-cookbooks/apache2"
-cookbook 'runit', '~> 1.0.6'
-cookbook 'statsd', '~> 0.1.0', github: "rackspace-cookbooks/statsd"
-cookbook 'cloud_monitoring', github: "rackspace-cookbooks/cookbook-cloudmonitoring"
+cookbook 'rackspace_build-essential', github: "rackspace-cookbooks/rackspace_build-essential"
+cookbook 'rackspace_apache', github: "rackspace-cookbooks/rackspace_apache"
+cookbook 'runit', github: "rackspace-cookbooks/runit"
+cookbook 'rackspace_statsd', github: "rackspace-cookbooks/rackspace_statsd"
+cookbook 'rackspace_cloudmonitoring', github: "rackspace-cookbooks/rackspace_cloudmonitoring"
 
 group :integration do
-  cookbook 'apt', github: "rackspace-cookbooks/apt"
+  cookbook 'rackspace_apt', github: "rackspace-cookbooks/rackspace_apt"
 end
