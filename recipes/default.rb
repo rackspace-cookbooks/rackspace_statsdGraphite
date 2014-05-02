@@ -14,10 +14,8 @@ if node['platform_family'] == 'rhel'
   recipes.push('rackspace_statsdGraphite::rhel')
 end
 
-recipes = %w(
-  graphite
-  rackspace_statsd
-)
+recipes.push('rackspace_statsd')
+recipes.push('graphite')
 
 unless node['graphite']['whisper_disk'] == ""
 	recipes.unshift("rackspace_statsdGraphite::storage")
