@@ -9,4 +9,4 @@ version          '0.1.1'
 depends 'graphite', '= 0.4.8'
 depends 'rackspace_statsd', '~> 1.0'
 
-suggests 'rackspace_cloudmonitoring', '~> 1.0.0'
+suggests 'rackspace_cloudmonitoring', '~> 3.1'
